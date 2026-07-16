@@ -1,0 +1,17 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# Local rendering/work files
+tmp/
+
+# Unpublished paper manuscripts used only as local references
+ase26-paper13.pdf
+icse2027-paper493.pdf

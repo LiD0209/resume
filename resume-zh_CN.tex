@@ -1,0 +1,108 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
+\usepackage{tabularx}
+\pagenumbering{gobble} % suppress displaying page number
+
+\usepackage{url}  % 为了正确处理 github 链接
+
+\begin{document}
+
+% 定义一个命令，展示两栏信息
+
+
+\name{李向东}
+
+% {E-mail}{mobilephone}{homepage}
+% be careful of _ in emaill address
+
+
+\begin{center}
+  \makebox[0.95\textwidth][c]{电话：15938771473｜邮箱：lxd\_dong@bupt.edu.cn｜政治面貌：共青团员}
+\end{center}
+
+
+% {E-mail}{mobilephone}
+% keep the last empty braces!
+%\contactInfo{xxx@yuanbin.me}{(+86) 131-221-87xxx}{}
+
+
+% \section{\faGraduationCap\ 教育背景}
+\section{教育背景}
+\datedsubsection{\textbf{北京邮电大学},网络与信息安全,\textit{博士研究生}}{2025.9 - 至今}
+\datedsubsection{\textbf{北京邮电大学},网络与信息安全,\textit{硕士研究生}}{2023.9 - 2025.6}
+% \ \textbf{排名11/133(前10\%)},中国科学院大学学业奖学金(2次),IEEE Student member,预计2018年6月毕业
+\datedsubsection{\textbf{郑州轻工业大学},计算机科学与技术,\textit{工学学士}}{2019.9 - 2023.6}
+
+
+
+% \section{\faCogs\ IT 技能}
+\section{学术成果}
+% increase linespacing [parsep=0.5ex]
+\noindent \textbf{ASE} \ \textit{[CCF A]} \ \textbf{已录用} \hfill \textbf{第一作者，前8.9\%}   \\
+<SpecFSM: Extracting and Repairing Finite State Machines from Protocol Specification Documents>  \ \ \ \ \ \ 2026年 \\
+\noindent \textbf{INFOCOM} \ \textit{[CCF A]} \ \textbf{已录用} \hfill \textbf{第三作者} \\
+<Formally Verifying the State Machine of TLS 1.3 Handshake in OpenSSL>  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  2025年 \\
+\noindent \textbf{Inscrypt} \ \textit{[CCF C]} \ \textbf{已录用} \hfill \textbf{第三作者} \\      
+<General Covert Communication Framework Based on Application Virtualization>  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 2026年 \\                             
+\noindent \textbf{ICSE} \ \textit{[CCF A]} \ \textbf{在投中} \hfill \textbf{第一作者} \\ 
+<SpecField: Field-Level Conformance Checking Between Protocol Standards and Implementations>   \ \ \ \ \ \ \ \ 2027年 \\  
+\noindent \textbf{SAS} \ \textit{[CCF B]} \ \textbf{在投中} \hfill \textbf{第一作者} \\
+<Verifying the Correctness of ChaCha20-Poly1305
+Implementation in OpenSSL>  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  2026年
+\noindent \textbf{专利：}一种状态转移实现代码的形式化验证方法（编号：CN202410457467.2） \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 2024年 \\[0.5ex]
+\noindent \textbf{专利：}一种基于序列递推关系的密码协议状态转移建模方法及系统（编号：CN202410281130.0） \   2024年 \\[0.5ex]
+\noindent \textbf{专利：}一种验证C语言与Rust语言功能一致性的方法（编号：KN25000521CN） \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  2025年
+
+\section*{科研项目}
+\noindent
+\textbf{SpecFSM: Extracting and Repairing Finite State Machines from} \\
+\textbf{Protocol Specification Documents} \hfill \textit{ASE 2026（第一作者，已录用）} \\
+\noindent 设计 SpecFSM 框架，将 FSM 初始抽取、状态补全、证据追踪、形式化验证与自动修复整合为闭环；基于 RAG 检索跨段证据，对 Unknown 源状态进行受约束补全，减少 LLM 无依据推断。\par
+\noindent 设计多粒度证据追踪与 TLA+/TLC 验证，检查死锁、状态可达性及协议属性；利用反例定位缺陷，通过增/改/删三类受限编辑迭代修复 FSM。\par
+\noindent 在 TCP、DCCP、BGP、PPTP、LTP、SCTP 6 种协议文档及 4 类 LLM 上完成评测；相较 PROSPER，正确抽取的状态迁移数平均提升 54.7\%，同时增强 FSM 的逻辑有效性与可解释性。\par
+
+\noindent
+\textbf{SpecField: Field-Level Conformance Checking Between Protocol} \\
+\textbf{Standards and Implementations} \hfill \textit{ICSE 2027（第一作者，在投中）} \\
+\noindent 提出字段级一致性检查框架 SpecField，以协议字段为语义锚点；构建字段空间和结构化规则表示，从 RFC/OASIS 标准中提取字段、条件、动作、规范模态及原文证据。\par
+\noindent 设计语法感知的规则-代码对齐方法，结合变量精确匹配、词法重叠与语义检索，定位字段解析、校验、状态依赖及错误处理路径；通过迭代证据补全与自动测试生成可审计报告和复现工件。\par
+\noindent 在 TLS/DTLS、MQTT、QUIC 和 CoAP 的多个开源实现上提交 240 份一致性偏差报告；98 份获维护者确认、91 份已修复，仅 6 份被判定为误报，其中 3 份已分配新的 CVE 编号。\par
+
+
+\section{实习经历}
+\noindent
+\textbf{美团} \hfill \textit{后端开发工程师｜美团地图} \\
+\noindent 参与美团地图后端服务研发，围绕地图业务场景完成需求分析、方案设计、服务接口开发和上线交付；负责地图相关数据的查询与处理，梳理上下游依赖及调用链路，支撑业务方稳定接入地图能力；参与接口性能和服务稳定性治理，定位慢调用、异常请求及数据不一致问题，完成线上问题复现、根因分析、修复验证和经验复盘；与产品、客户端、测试及上下游团队协作，完成需求评审、接口联调、测试验收和版本发布，并沉淀接口文档与技术方案。
+
+\newpage
+\section{个人情况}
+\noindent \textbf{研究方向：} AI for Software Engineering，协议规范理解与实现一致性分析，协议状态机抽取与形式化验证 \\[0.5ex]
+\noindent \textbf{专业技能：} 大语言模型：熟悉主流 LLM 的 API 调用、Prompt Engineering、RAG、Agent 工作流、多轮推理与结构化输出；检索与信息抽取：掌握长文档切分、语义检索、候选结果重排、实体与关系抽取及证据追踪；程序分析与测试：熟悉静态代码分析、语法感知代码检索、调用链分析、错误处理路径定位、自动测试生成与缺陷定位；形式化验证：掌握有限状态机建模、TLA+/TLC 模型检测、时序性质验证、死锁与可达性分析、反例分析；实验评测：具备数据集构建、多模型对比、Precision/Recall/F1 指标分析、消融实验与复现工件构建能力。\\[0.5ex]
+\noindent \textbf{参与项目：} 国家自然科学基金，华为CCF胡杨林基金，开源之夏（个人），网络安全创新资助计划（个人）\\[0.5ex]
+\noindent \textbf{编程技能：} 熟练掌握 Java、Python，熟悉 C/C++，熟练掌握 LaTeX 进行论文编写与排版工作。\\[0.5ex]
+\noindent \textbf{开源实现漏洞：} CVE-2026-6412，CVE-2026-54441，CVE-2026-25832 \\[0.5ex]
+
+
+% \section{\faHeartO\ 项目/作品摘要}
+% \section{项目/作品摘要}
+% \datedline{\textit{An Integrated Version of Security Monitor Vis System}, https://hijiangtao.github.io/ss-vis-component/ }{}
+% \datedline{\textit{Dark-Tech}, https://github.com/hijiangtao/dark-tech/ }{}
+% \datedline{\textit{融合社交网络数据挖掘的电视节目可视化分析系统}, https://hijiangtao.github.io/variety-show-hot-spot-vis/}{}
+% \datedline{\textit{LeetCodeOJ Solutions}, https://github.com/hijiangtao/LeetCodeOJ}{}
+% \datedline{\textit{Info-Vis}, https://github.com/ISCAS-VIS/infovis-ucas}{}
+
+
+% \section{\faInfo\ 社会实践/其他}
+
+%% Reference
+%\newpage
+%\bibliographystyle{IEEETran}
+%\bibliography{mycite}
+\end{document}
